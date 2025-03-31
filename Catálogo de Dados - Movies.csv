@@ -1,0 +1,18 @@
+﻿Tabela;Nome da Coluna;Tipo de Dado;Descrição;Chave
+fato_avaliacoes;id_titulo;STRING;Identificador do título;PK, FK
+fato_avaliacoes;nota_media;FLOAT;Nota média dada pelos usuários;-
+fato_avaliacoes;num_votos;INT;Quantidade total de votos recebidos;-
+dim_titulo;id_titulo;STRING;Identificador do título;PK
+dim_titulo;tipo_titulo;STRING;Tipo do título (filme, curta, série, etc.);-
+dim_titulo;titulo_primario;STRING;Nome do título;-
+dim_titulo;titulo_original;STRING;Nome original do título;-
+dim_titulo;ano_lancamento;INT;Ano de lançamento do título;-
+dim_titulo;generos;STRING;Lista de gêneros do título;-
+dim_pessoa;id_pessoa;STRING;Identificador da pessoa;PK
+dim_pessoa;nome;STRING;Nome do diretor;-
+dim_pessoa;ano_nascimento;INT;Ano de nascimento;-
+dim_pessoa;ano_falecimento;INT;Ano de falecimento (se aplicável);-
+dim_pessoa;principais_trabalhos;STRING;Lista de principais títulos em que trabalhou;-
+rel_titulo_pessoa;id_titulo;STRING;Identificador do título;FK
+rel_titulo_pessoa;id_pessoa;STRING;Identificador do diretor;FK
+rel_titulo_pessoa;papel;STRING;"Função da pessoa no título (neste caso, sempre ""Diretor"")";-
